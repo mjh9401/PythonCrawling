@@ -26,3 +26,18 @@ for td in tds:
 print(names)
 print(prices)
 
+
+names = []
+
+for td in soup.select('td.tit'):
+    names.append(td.get_text(strip=True))
+
+prices = []
+
+for price in soup.select('td.sale'):
+    prices.append(price.get_text(strip=True))
+
+print(names)
+print(prices)
+
+
